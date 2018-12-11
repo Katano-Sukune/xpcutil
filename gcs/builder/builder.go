@@ -9,10 +9,10 @@ import (
 	"crypto/rand"
 	"encoding/binary"
 
-	"github.com/ltcsuite/ltcd/chaincfg/chainhash"
-	"github.com/ltcsuite/ltcd/txscript"
-	"github.com/ltcsuite/ltcd/wire"
-	"github.com/ltcsuite/ltcutil/gcs"
+	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
+	"github.com/qtumatomicswap/qtumd/txscript"
+	"github.com/qtumatomicswap/qtumd/wire"
+	"github.com/qtumatomicswap/qtumutil/gcs"
 )
 
 // DefaultP is the default collision probability (2^-20)

@@ -7,7 +7,7 @@ package base58_test
 import (
 	"testing"
 
-	"github.com/ltcsuite/ltcutil/base58"
+	"github.com/qtumatomicswap/qtumutil/base58"
 )
 
 var checkEncodingStringTests = []struct {

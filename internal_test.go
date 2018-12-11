@@ -3,18 +3,18 @@
 // license that can be found in the LICENSE file.
 
 /*
-This test file is part of the ltcutil package rather than than the
-ltcutil_test package so it can bridge access to the internals to properly test
+This test file is part of the qtumutil package rather than than the
+qtumutil_test package so it can bridge access to the internals to properly test
 cases which are either not possible or can't reliably be tested via the public
 interface. The functions are only exported while the tests are being run.
 */
 
-package ltcutil
+package qtumutil
 
 import (
-	"github.com/Roasbeef/ltcutil/bech32"
-	"github.com/ltcsuite/ltcd/btcec"
-	"github.com/ltcsuite/ltcutil/base58"
+	"github.com/Roasbeef/qtumutil/bech32"
+	"github.com/qtumatomicswap/qtumd/btcec"
+	"github.com/qtumatomicswap/qtumutil/base58"
 	"golang.org/x/crypto/ripemd160"
 )
 

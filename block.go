@@ -2,15 +2,15 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package ltcutil
+package qtumutil
 
 import (
 	"bytes"
 	"fmt"
 	"io"
 
-	"github.com/ltcsuite/ltcd/chaincfg/chainhash"
-	"github.com/ltcsuite/ltcd/wire"
+	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
+	"github.com/qtumatomicswap/qtumd/wire"
 )
 
 // OutOfRangeError describes an error due to accessing an element that is out
@@ -105,7 +105,7 @@ func (b *Block) Hash() *chainhash.Hash {
 	return &hash
 }
 
-// Tx returns a wrapped transaction (ltcutil.Tx) for the transaction at the
+// Tx returns a wrapped transaction (qtumutil.Tx) for the transaction at the
 // specified index in the Block.  The supplied index is 0 based.  That is to
 // say, the first transaction in the block is txNum 0.  This is nearly
 // equivalent to accessing the raw transaction (wire.MsgTx) from the
@@ -137,10 +137,10 @@ func (b *Block) Tx(txNum int) (*Tx, error) {
 	return newTx, nil
 }
 
-// Transactions returns a slice of wrapped transactions (ltcutil.Tx) for all
+// Transactions returns a slice of wrapped transactions (qtumutil.Tx) for all
 // transactions in the Block.  This is nearly equivalent to accessing the raw
 // transactions (wire.MsgTx) in the underlying wire.MsgBlock, however it
-// instead provides easy access to wrapped versions (ltcutil.Tx) of them.
+// instead provides easy access to wrapped versions (qtumutil.Tx) of them.
 func (b *Block) Transactions() []*Tx {
 	// Return transactions if they have ALL already been generated.  This
 	// flag is necessary because the wrapped transactions are lazily

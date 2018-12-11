@@ -2,14 +2,14 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package ltcutil_test
+package qtumutil_test
 
 import (
 	"testing"
 
-	"github.com/ltcsuite/ltcd/btcec"
-	"github.com/ltcsuite/ltcd/chaincfg"
-	. "github.com/ltcsuite/ltcutil"
+	"github.com/qtumatomicswap/qtumd/btcec"
+	"github.com/qtumatomicswap/qtumd/chaincfg"
+	. "github.com/qtumatomicswap/qtumutil"
 )
 
 func TestEncodeDecodeWIF(t *testing.T) {

@@ -9,10 +9,10 @@ import (
 	"math"
 	"sync"
 
-	"github.com/ltcsuite/ltcd/chaincfg/chainhash"
-	"github.com/ltcsuite/ltcd/txscript"
-	"github.com/ltcsuite/ltcd/wire"
-	"github.com/ltcsuite/ltcutil"
+	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
+	"github.com/qtumatomicswap/qtumd/txscript"
+	"github.com/qtumatomicswap/qtumd/wire"
+	"github.com/qtumatomicswap/qtumutil"
 )
 
 // ln2Squared is simply the square of the natural log of 2.
@@ -270,7 +270,7 @@ func (bf *Filter) maybeAddOutpoint(pkScript []byte, outHash *chainhash.Hash, out
 // update flags set via the loaded filter if needed.
 //
 // This function MUST be called with the filter lock held.
-func (bf *Filter) matchTxAndUpdate(tx *ltcutil.Tx) bool {
+func (bf *Filter) matchTxAndUpdate(tx *qtumutil.Tx) bool {
 	// Check if the filter matches the hash of the transaction.
 	// This is useful for finding transactions when they appear in a block.
 	matched := bf.matches(tx.Hash()[:])
@@ -335,7 +335,7 @@ func (bf *Filter) matchTxAndUpdate(tx *ltcutil.Tx) bool {
 // update flags set via the loaded filter if needed.
 //
 // This function is safe for concurrent access.
-func (bf *Filter) MatchTxAndUpdate(tx *ltcutil.Tx) bool {
+func (bf *Filter) MatchTxAndUpdate(tx *qtumutil.Tx) bool {
 	bf.mtx.Lock()
 	match := bf.matchTxAndUpdate(tx)
 	bf.mtx.Unlock()

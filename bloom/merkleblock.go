@@ -5,10 +5,10 @@
 package bloom
 
 import (
-	"github.com/ltcsuite/ltcd/blockchain"
-	"github.com/ltcsuite/ltcd/chaincfg/chainhash"
-	"github.com/ltcsuite/ltcd/wire"
-	"github.com/ltcsuite/ltcutil"
+	"github.com/qtumatomicswap/qtumd/blockchain"
+	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
+	"github.com/qtumatomicswap/qtumd/wire"
+	"github.com/qtumatomicswap/qtumutil"
 )
 
 // merkleBlock is used to house intermediate information needed to generate a
@@ -79,7 +79,7 @@ func (m *merkleBlock) traverseAndBuild(height, pos uint32) {
 
 // NewMerkleBlock returns a new *wire.MsgMerkleBlock and an array of the matched
 // transaction index numbers based on the passed block and filter.
-func NewMerkleBlock(block *ltcutil.Block, filter *Filter) (*wire.MsgMerkleBlock, []uint32) {
+func NewMerkleBlock(block *qtumutil.Block, filter *Filter) (*wire.MsgMerkleBlock, []uint32) {
 	numTx := uint32(len(block.Transactions()))
 	mBlock := merkleBlock{
 		numTx:       numTx,

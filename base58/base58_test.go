@@ -9,7 +9,7 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/ltcsuite/ltcutil/base58"
+	"github.com/qtumatomicswap/qtumutil/base58"
 )
 
 var stringTests = []struct {
