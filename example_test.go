@@ -1,21 +1,21 @@
-package qtumutil_test
+package xpcutil_test
 
 import (
 	"fmt"
 	"math"
 
-	"github.com/qtumatomicswap/qtumutil"
+	"github.com/Katano-Sukune/xpcutil"
 )
 
 func ExampleAmount() {
 
-	a := qtumutil.Amount(0)
+	a := xpcutil.Amount(0)
 	fmt.Println("Zero Satoshi:", a)
 
-	a = qtumutil.Amount(1e8)
+	a = xpcutil.Amount(1e8)
 	fmt.Println("100,000,000 Satoshis:", a)
 
-	a = qtumutil.Amount(1e5)
+	a = xpcutil.Amount(1e5)
 	fmt.Println("100,000 Satoshis:", a)
 	// Output:
 	// Zero Satoshi: 0 BTC
@@ -24,28 +24,28 @@ func ExampleAmount() {
 }
 
 func ExampleNewAmount() {
-	amountOne, err := qtumutil.NewAmount(1)
+	amountOne, err := xpcutil.NewAmount(1)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountOne) //Output 1
 
-	amountFraction, err := qtumutil.NewAmount(0.01234567)
+	amountFraction, err := xpcutil.NewAmount(0.01234567)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountFraction) //Output 2
 
-	amountZero, err := qtumutil.NewAmount(0)
+	amountZero, err := xpcutil.NewAmount(0)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(amountZero) //Output 3
 
-	amountNaN, err := qtumutil.NewAmount(math.NaN())
+	amountNaN, err := xpcutil.NewAmount(math.NaN())
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -59,13 +59,13 @@ func ExampleNewAmount() {
 }
 
 func ExampleAmount_unitConversions() {
-	amount := qtumutil.Amount(44433322211100)
+	amount := xpcutil.Amount(44433322211100)
 
-	fmt.Println("Satoshi to kBTC:", amount.Format(qtumutil.AmountKiloBTC))
+	fmt.Println("Satoshi to kBTC:", amount.Format(xpcutil.AmountKiloBTC))
 	fmt.Println("Satoshi to BTC:", amount)
-	fmt.Println("Satoshi to MilliBTC:", amount.Format(qtumutil.AmountMilliBTC))
-	fmt.Println("Satoshi to MicroBTC:", amount.Format(qtumutil.AmountMicroBTC))
-	fmt.Println("Satoshi to Satoshi:", amount.Format(qtumutil.AmountSatoshi))
+	fmt.Println("Satoshi to MilliBTC:", amount.Format(xpcutil.AmountMilliBTC))
+	fmt.Println("Satoshi to MicroBTC:", amount.Format(xpcutil.AmountMicroBTC))
+	fmt.Println("Satoshi to Satoshi:", amount.Format(xpcutil.AmountSatoshi))
 
 	// Output:
 	// Satoshi to kBTC: 444.333222111 kBTC

@@ -2,16 +2,16 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package qtumutil
+package xpcutil
 
 import (
 	"bytes"
 	"errors"
 
-	"github.com/qtumatomicswap/qtumd/btcec"
-	"github.com/qtumatomicswap/qtumd/chaincfg"
-	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
-	"github.com/qtumatomicswap/qtumutil/base58"
+	"github.com/Katano-Sukune/xpcd/btcec"
+	"github.com/Katano-Sukune/xpcd/chaincfg"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcutil/base58"
 )
 
 // ErrMalformedPrivateKey describes an error where a WIF-encoded private

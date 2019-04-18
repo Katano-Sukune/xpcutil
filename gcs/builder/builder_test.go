@@ -9,13 +9,13 @@ import (
 	"encoding/hex"
 	"testing"
 
-	"github.com/qtumatomicswap/qtumd/chaincfg"
-	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
-	"github.com/qtumatomicswap/qtumd/txscript"
-	"github.com/qtumatomicswap/qtumd/wire"
-	"github.com/qtumatomicswap/qtumutil"
-	"github.com/qtumatomicswap/qtumutil/gcs"
-	"github.com/qtumatomicswap/qtumutil/gcs/builder"
+	"github.com/Katano-Sukune/xpcd/chaincfg"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcd/txscript"
+	"github.com/Katano-Sukune/xpcd/wire"
+	"github.com/Katano-Sukune/xpcutil"
+	"github.com/Katano-Sukune/xpcutil/gcs"
+	"github.com/Katano-Sukune/xpcutil/gcs/builder"
 )
 
 var (
@@ -79,8 +79,8 @@ func TestUseBlockHash(t *testing.T) {
 		Index: 4321,
 	}
 
-	// qtumutil.Address
-	addr, err := qtumutil.DecodeAddress(testAddr, &chaincfg.MainNetParams)
+	// xpcutil.Address
+	addr, err := xpcutil.DecodeAddress(testAddr, &chaincfg.MainNetParams)
 	if err != nil {
 		t.Fatalf("Address decode failed: %s", err.Error())
 	}

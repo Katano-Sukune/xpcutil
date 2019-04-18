@@ -8,7 +8,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/qtumatomicswap/qtumutil/bech32"
+	"github.com/Katano-Sukune/xpcutil/bech32"
 )
 
 func TestBech32(t *testing.T) {

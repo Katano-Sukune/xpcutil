@@ -9,9 +9,9 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
-	"github.com/qtumatomicswap/qtumd/wire"
-	"github.com/qtumatomicswap/qtumutil/bloom"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcd/wire"
+	"github.com/Katano-Sukune/xpcutil/bloom"
 )
 
 // This example demonstrates how to create a new bloom filter, add a transaction

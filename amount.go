@@ -2,7 +2,7 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package qtumutil
+package xpcutil
 
 import (
 	"errors"
@@ -33,19 +33,19 @@ const (
 func (u AmountUnit) String() string {
 	switch u {
 	case AmountMegaBTC:
-		return "MQTUM"
+		return "MXPC"
 	case AmountKiloBTC:
-		return "kQTUM"
+		return "kXPC"
 	case AmountBTC:
-		return "QTUM"
+		return "XPC"
 	case AmountMilliBTC:
-		return "mQTUM"
+		return "mXPC"
 	case AmountMicroBTC:
-		return "μQTUM"
+		return "μXPC"
 	case AmountSatoshi:
 		return "Satoshi"
 	default:
-		return "1e" + strconv.FormatInt(int64(u), 10) + " QTUM"
+		return "1e" + strconv.FormatInt(int64(u), 10) + " XPC"
 	}
 }
 
@@ -72,7 +72,7 @@ func round(f float64) Amount {
 // NewAmount is for specifically for converting BTC to Satoshi.
 // For creating a new Amount with an int64 value which denotes a quantity of Satoshi,
 // do a simple type conversion from type int64 to Amount.
-// See GoDoc for example: http://godoc.org/github.com/qtumatomicswap/qtumutil#example-Amount
+// See GoDoc for example: http://godoc.org/github.com/Katano-Sukune/xpcutil#example-Amount
 func NewAmount(f float64) (Amount, error) {
 	// The amount is only considered invalid if it cannot be represented
 	// as an integer type.  This may happen if f is NaN or +-Infinity.
@@ -91,7 +91,7 @@ func NewAmount(f float64) (Amount, error) {
 // ToUnit converts a monetary amount counted in litecoin base units to a
 // floating point value representing an amount of litecoin.
 func (a Amount) ToUnit(u AmountUnit) float64 {
-	return float64(a) / math.Pow10(int(u+8))
+	return float64(a) / math.Pow10(int(u+4))
 }
 
 // ToBTC is the equivalent of calling ToUnit with AmountBTC.
@@ -105,7 +105,7 @@ func (a Amount) ToBTC() float64 {
 // the units with SI notation, or "Satoshi" for the base unit.
 func (a Amount) Format(u AmountUnit) string {
 	units := " " + u.String()
-	return strconv.FormatFloat(a.ToUnit(u), 'f', -int(u+8), 64) + units
+	return strconv.FormatFloat(a.ToUnit(u), 'f', -int(u+4), 64) + units
 }
 
 // String is the equivalent of calling Format with AmountBTC.

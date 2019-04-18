@@ -7,8 +7,8 @@ package hdkeychain_test
 import (
 	"fmt"
 
-	"github.com/qtumatomicswap/qtumd/chaincfg"
-	"github.com/qtumatomicswap/qtumutil/hdkeychain"
+	"github.com/Katano-Sukune/xpcd/chaincfg"
+	"github.com/Katano-Sukune/xpcutil/hdkeychain"
 )
 
 // This example demonstrates how to generate a cryptographically random seed

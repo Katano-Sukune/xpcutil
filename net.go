@@ -4,7 +4,7 @@
 
 // +build !appengine
 
-package qtumutil
+package xpcutil
 
 import (
 	"net"

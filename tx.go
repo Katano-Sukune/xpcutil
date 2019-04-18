@@ -2,14 +2,14 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package qtumutil
+package xpcutil
 
 import (
 	"bytes"
 	"io"
 
-	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
-	"github.com/qtumatomicswap/qtumd/wire"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcd/wire"
 )
 
 // TxIndexUnknown is the value returned for a transaction index that is unknown.

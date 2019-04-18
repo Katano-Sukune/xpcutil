@@ -11,7 +11,7 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/qtumatomicswap/qtumutil/gcs"
+	"github.com/Katano-Sukune/xpcutil/gcs"
 )
 
 var (

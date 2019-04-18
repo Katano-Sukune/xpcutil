@@ -9,10 +9,10 @@ import (
 	"crypto/rand"
 	"encoding/binary"
 
-	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
-	"github.com/qtumatomicswap/qtumd/txscript"
-	"github.com/qtumatomicswap/qtumd/wire"
-	"github.com/qtumatomicswap/qtumutil/gcs"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcd/txscript"
+	"github.com/Katano-Sukune/xpcd/wire"
+	"github.com/Katano-Sukune/xpcutil/gcs"
 )
 
 // DefaultP is the default collision probability (2^-20)

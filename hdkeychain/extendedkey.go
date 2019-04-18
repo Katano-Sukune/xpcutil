@@ -18,11 +18,11 @@ import (
 	"fmt"
 	"math/big"
 
-	"github.com/qtumatomicswap/qtumd/btcec"
-	"github.com/qtumatomicswap/qtumd/chaincfg"
-	"github.com/qtumatomicswap/qtumd/chaincfg/chainhash"
-	"github.com/qtumatomicswap/qtumutil"
-	"github.com/qtumatomicswap/qtumutil/base58"
+	"github.com/Katano-Sukune/xpcd/btcec"
+	"github.com/Katano-Sukune/xpcd/chaincfg"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcutil"
+	"github.com/Katano-Sukune/xpcutil/base58"
 )
 
 const (
@@ -324,7 +324,7 @@ func (k *ExtendedKey) Child(i uint32) (*ExtendedKey, error) {
 
 	// The fingerprint of the parent for the derived child is the first 4
 	// bytes of the RIPEMD160(SHA256(parentPubKey)).
-	parentFP := qtumutil.Hash160(k.pubKeyBytes())[:4]
+	parentFP := xpcutil.Hash160(k.pubKeyBytes())[:4]
 	return NewExtendedKey(k.version, childKey, childChainCode, parentFP,
 		k.depth+1, i, isPrivate), nil
 }
@@ -377,9 +377,9 @@ func (k *ExtendedKey) ECPrivKey() (*btcec.PrivateKey, error) {
 
 // Address converts the extended key to a standard litecoin pay-to-pubkey-hash
 // address for the passed network.
-func (k *ExtendedKey) Address(net *chaincfg.Params) (*qtumutil.AddressPubKeyHash, error) {
-	pkHash := qtumutil.Hash160(k.pubKeyBytes())
-	return qtumutil.NewAddressPubKeyHash(pkHash, net)
+func (k *ExtendedKey) Address(net *chaincfg.Params) (*xpcutil.AddressPubKeyHash, error) {
+	pkHash := xpcutil.Hash160(k.pubKeyBytes())
+	return xpcutil.NewAddressPubKeyHash(pkHash, net)
 }
 
 // paddedAppend appends the src byte slice to dst, returning the new slice.

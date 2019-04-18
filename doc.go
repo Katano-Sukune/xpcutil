@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 /*
-Package qtumutil provides litecoin-specific convenience functions and types.
+Package xpcutil provides litecoin-specific convenience functions and types.
 
 Block Overview
 
@@ -36,11 +36,11 @@ To decode/encode an address:
 		"e0ea1f61deb649f6bc3f4cef38c4f35504e51ec112de5c384df7ba0b8d57" +
 		"8a4c702b6bf11d5f"
 	defaultNet := &chaincfg.MainNetParams
-	addr, err := qtumutil.DecodeAddress(addrString, defaultNet)
+	addr, err := xpcutil.DecodeAddress(addrString, defaultNet)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 	fmt.Println(addr.EncodeAddress())
 */
-package qtumutil
+package xpcutil

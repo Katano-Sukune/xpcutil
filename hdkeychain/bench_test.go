@@ -7,7 +7,7 @@ package hdkeychain_test
 import (
 	"testing"
 
-	"github.com/qtumatomicswap/qtumutil/hdkeychain"
+	"github.com/Katano-Sukune/xpcutil/hdkeychain"
 )
 
 // bip0032MasterPriv1 is the master private extended key from the first set of

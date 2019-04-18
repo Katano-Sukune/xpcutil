@@ -2,13 +2,13 @@
 // Use of this source code is governed by an ISC
 // license that can be found in the LICENSE file.
 
-package qtumutil_test
+package xpcutil_test
 
 import (
 	"math"
 	"testing"
 
-	. "github.com/qtumatomicswap/qtumutil"
+	. "github.com/Katano-Sukune/xpcutil"
 )
 
 func TestAmountCreation(t *testing.T) {
