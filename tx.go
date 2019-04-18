@@ -8,7 +8,7 @@ import (
 	"bytes"
 	"io"
 
-	"github.com/btcsuite/btcd/chaincfg/chainhash"
+	"github.com/Katano-Sukune/xpcd/chaincfg/chainhash"
 	"github.com/btcsuite/btcd/wire"
 )
 

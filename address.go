@@ -12,7 +12,7 @@ import (
 	"strings"
 
 	"github.com/btcsuite/btcd/btcec"
-	"github.com/btcsuite/btcd/chaincfg"
+	"github.com/Katano-Sukune/xpcd/chaincfg"
 	"github.com/btcsuite/btcutil/base58"
 	"github.com/btcsuite/btcutil/bech32"
 	"golang.org/x/crypto/ripemd160"
